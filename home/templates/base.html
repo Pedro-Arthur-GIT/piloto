@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} Home {% endblock %}</title>
+</head>
+<body>
+    <nav>
+
+        <a href="{% url 'index' %}">Home</a> |
+        <a href="{% url 'sobre' %}">Sobre</a> |
+        <a href="{% url 'contato' %}">Contato</a> |
+        <a href="{% url 'ajuda' %}">Ajuda</a> 
+
+    </nav>
+
+    {% block conteudo %}
+
+        Conteúdo do Template
+    
+    {% endblock %}
+</body>
+</html>
