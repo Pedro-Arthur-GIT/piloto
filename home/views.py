@@ -41,3 +41,7 @@ def dia_semana(request, dia):
     else:
 
         return HttpResponseBadRequest("<h1>Número inválido. Por favor, insira um número de 1 a 7.</h1>")
+    
+     
+def dashboard(request):
+    return render(request, "dashboard.html")
