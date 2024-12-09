@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Produtos {% endblock%}
+
+{% block titulo_page %} Listagem de Produtos {% endblock %}
+
+
+
+{% block conteudo %}
+
+<button class = "btn btn-primary" style= "margin-bottom: 15px" onclick="location.href='{% url 'form_prod.html' %}'">Novo Produto</button>
+
+<table class="table table-bordered table-hover">
+
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Valor (R$)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in lista %}
+        <tr>
+            <td> {{item.id}}</td>
+            <td> {{item.nome}}</td>
+            <td>{{item.preco}}</td>
+        </tr>
+        {% endfor %}
+      
+    </tbody>
+</table>
+
+
+
+{% endblock %}
+
