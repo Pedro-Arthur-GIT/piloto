@@ -1,76 +1,67 @@
 {% extends 'base.html' %}
 
-{% block titulo_page %} Página Inicial {% endblock %}
+{% block titulo_page %} <h5> Página Inicial </h5>{% endblock %}
 
 {% block cards %}
-   <div class="container-fluid mt-4">
+               <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="card card-custom">
+                     <div class="card-header card-header-custom">
+                        <h5>New Orders</h5>
+                     </div>
 
-      
-      <div class="row">
-         <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card card-custom">
-
-               <div class="card-header card-header-custom">
-                  <h5>Bounce Rate</h5>
-               </div>
-               
-            </div>
-
-            <div class="card-body card-body-custom">
-                  <h3>53%</h3>
-            </div>
-
-         </div>
-
-         <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card card-custom">
-
-               <div class="card-header card-header-custom">
-                     <h5>Bounce Rate</h5>
+                     <div class="card-body card-body-custom">
+                        <h3>150</h3>
+                     </div>
+                  </div>
                </div>
 
-               <div class="card-body card-body-custom">
-                  <h3>53%</h3>
+               <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="card card-custom">
+
+                     <div class="card-header card-header-custom">
+                        <h5>Bounce Rate</h5>
+                     </div>
+
+                     <div class="card-body card-body-custom">
+                        <h3>53%</h3>
+                     </div>
+
+                  </div>
                </div>
 
-            </div>
-         </div>
+               <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="card card-custom">
 
-         <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card card-custom">
+                     <div class="card-header card-header-custom">
+                        <h5>User Registrations</h5>
+                     </div>
 
-               <div class="card-header card-header-custom">
-                  <h5>User Registrations</h5>
+                     <div class="card-body card-body-custom">
+                           <h3>44</h3>
+                     </div>
+
+                  </div>
                </div>
 
-               <div class="card-body card-body-custom">
-                     <h3>44</h3>
+               <div class="col-lg-3 col-md-6 col-sm-12">
+                  <div class="card card-custom">
+
+                     <div class="card-header card-header-custom">
+                        <h5>Unique Visitors</h5>
+                     </div>
+
+                     <div class="card-body card-body-custom">
+                        <h3>65</h3>
+                     </div>
+
+                  </div>
                </div>
-
-            </div>
-         </div>
-
-         <div class="col-lg-3 col-md-6 col-sm-12">
-            <div class="card card-custom">
-
-               <div class="card-header card-header-custom">
-                  <h5>Unique Visitors</h5>
-               </div>
-
-               <div class="card-body card-body-custom">
-                  <h3>65</h3>
-               </div>
-
-            </div>
-         </div>
-      </div>
-
-   </div>
 
 {% endblock %}
 
+
 {% block conteudo %}
 
-   <h1> Bem vindo ao nosso sistema web! </h1>
+   <h3> Bem vindo ao nosso sistema web! </h3>
     
 {% endblock %}
