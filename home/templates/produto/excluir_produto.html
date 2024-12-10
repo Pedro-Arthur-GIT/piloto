@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Confirmação de Exclusão {% endblock %}
+
+{% block titulo_page %} Confirmação de Exclusão {% endblock %}
+
+{% block conteudo %}
+
+   <h3> Tem certeza que deseja excluir o Produto ID {{id}}? </h3>
+
+   <button onclick="location.href='{% url 'produtos' %}'" class= "btn btn-primary">Cancelar</button>
+   <button onclick="location.href='{% url 'index' %}'" class="btn btn-danger">Excluir</button>
+   
+    
+{% endblock %}

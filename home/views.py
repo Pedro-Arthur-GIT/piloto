@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseBadRequest
-from .forms import ContatoForm
+from .forms import *
 
 # Create your views here.
 
@@ -70,7 +70,27 @@ def produtos(request):
     }
     return render(request, 'produto/lista.html',contexto)  
 
-def form_prod(request):
-    return render(request, 'produto/form_prod.html')
+def form_produto(request):
+
+    form = ProdutoForm()
+    contexto = {
+        'form': form,
+    }
+    return render(request, 'produto/formulario.html', contexto)
+
+def detalhes_produto(request, id):
+    return render (request, 'produto/detalhes_produto.html', {'id' : id})
+
+def editar_produto(request, id):
+
+    form = ProdutoForm()
+    contexto = {
+        'form': form,
+        'id': id,
+    }
+    return render(request, 'produto/formulario.html', contexto)
+
+def excluir_produto(request, id):
+    return render (request, 'produto/excluir_produto.html', {'id' : id})
 
      

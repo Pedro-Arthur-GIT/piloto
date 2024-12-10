@@ -8,7 +8,7 @@
 
 {% block conteudo %}
 
-<button class = "btn btn-primary" style= "margin-bottom: 15px" onclick="location.href='{% url 'form_prod.html' %}'">Novo Produto</button>
+<button class = "btn btn-primary" style= "margin-bottom: 15px" onclick="location.href='{% url 'form_produto' %}'">Novo Produto</button>
 
 <table class="table table-bordered table-hover">
 
@@ -17,6 +17,7 @@
             <th scope="col">Código</th>
             <th scope="col">Descrição</th>
             <th scope="col">Valor (R$)</th>
+            <th scope="col">Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -25,6 +26,11 @@
             <td> {{item.id}}</td>
             <td> {{item.nome}}</td>
             <td>{{item.preco}}</td>
+            <td>
+                <button onclick="location.href='{% url 'detalhes_produto' item.id %}'" class= "btn btn-info">Detalhes</button>
+                <button onclick="location.href='{% url 'editar_produto' item.id %}'" class= "btn btn-warning">Editar</button>
+                <button onclick="location.href='{% url 'excluir_produto' item.id %}'" class= "btn btn-danger">Excluir</button>
+            </td>
         </tr>
         {% endfor %}
       

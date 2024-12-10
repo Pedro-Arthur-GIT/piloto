@@ -18,11 +18,20 @@ class ContatoForm(forms.Form):
     )
 
 
-
-
-
 class ProdutoForm(forms.Form):
-    nome = forms.CharField(max_length=100, label='Nome do Produto')
-    preco = forms.DecimalField(max_digits=10, decimal_places=2, label='Preço')
 
+    nome = forms.CharField(
+        max_length=100, 
+        label='Digite o nome do produto',
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nome do Produto'})
+    )
 
+    preco = forms.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        widget=forms.NumberInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Digite o preço do produto',
+        }),
+        label='Preço'
+    )
